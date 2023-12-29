@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Newsreader';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Newsreader-Regular'), url('../font/Newsreader-Regular.ttf') format('truetype');
+  }

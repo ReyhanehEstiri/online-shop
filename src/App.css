@@ -1,7 +1,18 @@
 .App {
   text-align: center;
 }
-
+body {
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  }
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +46,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.product-image{
+  width: 12rem;
+  border-radius: 20px;
+  margin: 0.5rem;
+}
+
+.bestsellers-product-wrap{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  overflow-x: scroll;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.new-releases-product-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.activity-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.root-container{
+  margin-top: 65%;
+  display: flex;
+  flex-direction: column;
 }

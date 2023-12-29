@@ -1,0 +1,85 @@
+body{
+    margin-left: 100rem important;
+    margin-right: 30rem;
+    min-height: 200vh;
+}
+
+.banner {
+    padding-top: 0rem;
+    padding-right: 12rem ;
+    padding-bottom: 10rem;
+    margin-bottom: 90rem;
+    width: 78rem;
+    height: 9.3125rem;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.00);
+}
+  
+.main_title{
+    padding-top: 3%;
+    margin-bottom: 0px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Newsreader;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 4.8rem */
+    letter-spacing: -0.08rem;
+    
+}
+
+.line {
+    padding-top: 3%;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 10px; 
+    width: 120rem;
+}
+
+.wishlist{
+    width: 38.625rem;
+    height: 59.125rem;
+    flex-shrink: 0;
+    border-radius: 2.5rem;
+    background: rgba(255, 255, 255, 0.25);
+    margin-right: 80rem;
+    margin-top: 20rem;
+    
+}
+.wishlist_style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%; 
+  }
+
+.wishlist_style a {
+    text-decoration: none; 
+    color: #000;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: IM FELL Great Primer SC;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0%; /* 0rem */
+    letter-spacing: 0.51rem;
+    color: inherit; 
+}
+  
+.wishlist_style a:hover {
+    color: #000; 
+}
+  
+.wishlist_style a:visited {
+    color: #000;
+}
+
+.user-card {
+    width: 38.625rem;
+    height: 14.6875rem;
+    flex-shrink: 0;
+    border-radius: 3.6875rem;
+    background: rgba(255, 255, 255, 0.50);
+}
+  

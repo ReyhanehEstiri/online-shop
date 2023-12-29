@@ -1,0 +1,82 @@
+body{
+    margin-left: 100rem important;
+    margin-right: 30rem;
+
+}
+
+.banner {
+  margin-right: 45rem;
+    padding-top: 0rem;
+    padding-right: 12rem ;
+    padding-bottom: 10rem;
+    margin-bottom: 10rem;
+    width: 78rem;
+    height: 9.3125rem;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.00);
+}
+  
+.main_title{
+    padding-top: 3%;
+    margin-top: 5rem;
+    margin-right: 10rem;
+    margin-bottom: 0px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Newsreader;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 4.8rem */
+    letter-spacing: -0.08rem;
+    
+}
+
+.line {
+    padding-top: 3%;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 10px; 
+    width: 120rem;
+  }
+
+
+.wishlist-items button{
+  margin-left: 115rem;
+  background-color: #426B1F;
+  color: #ffffff;
+  border-radius: 10px;
+  display: inline-flex;
+  padding: 13.5px 32px 13.5px 33px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.wishlist-item{
+  background-color: #426B1F;
+  color: #fff;
+  border-radius: 10px;
+  display: inline-flex;
+  padding: 13.5px 32px 13.5px 33px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  border: none;
+  cursor: pointer;
+
+}

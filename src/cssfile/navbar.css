@@ -1,0 +1,107 @@
+.navbar {
+    background-color: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    padding-right: 5%;
+    padding-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    right: 0;
+    left: 0;
+    position: absolute;
+  }
+  
+  .brand {
+    color: #426B1F;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Newsreader;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.32px;
+    /* margin-left: 20px; */
+    
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+  }
+  
+  li {
+    margin-left: 50px;
+    margin-right: 40px;
+  }
+  
+  li > a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  
+  li > a:hover {
+    color: #ffffff;
+  }
+.button{
+  background-color: #426B1F;
+  color: #fff;
+  border-radius: 10px;
+  display: inline-flex;
+  padding: 13.5px 32px 13.5px 33px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  border: none;
+  cursor: pointer;
+
+}
+
+.cart-button {
+    background-color: #426B1F;
+    color: #fff;
+    border-radius: 10px;
+    display: inline-flex;
+    padding: 13.5px 32px 13.5px 33px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    border: none;
+    cursor: pointer;
+}
+  
+.cart-button:hover {
+    background-color: #27ae60;
+ }
+
+ a{
+  text-decoration: none;
+  
+ }
+
+ a::selection{
+  background-color: #27ae60;
+ }

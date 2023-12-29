@@ -1,0 +1,254 @@
+/* body{
+    margin-left: 0rem ;
+    margin-right: 40rem;
+
+} */
+
+.banner {
+    padding-top: 0rem;
+    padding-right: 12rem ;
+    margin-left: 8rem;
+    padding-bottom: 10rem;
+    margin-top: -60rem;
+    /* margin-bottom: 80rem; */
+    width: 78rem;
+    height: 9.3125rem;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.00);
+}
+  
+.main_title{
+    padding-top: 3%;
+    margin-bottom: 0px;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Newsreader;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 4.8rem */
+    letter-spacing: -0.08rem;
+    
+}
+
+.line {
+    padding-top: 3%;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 10px; 
+    width: 120rem;
+}
+    
+/* Centering the .empty-product at the middle of the page */
+.empty-product {
+    text-align: center; /* Align text to the center */
+    margin-top: 50vh; /* Center vertically using viewport height */
+    margin-left: 50rem;
+}
+
+.empty-product > button {
+    font-size: 1.3rem;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: rgba(66, 107, 31, 1);
+    border-color: rgba(66, 107, 31, 1);
+    color: rgba(66, 107, 31, 1);
+    transition: all 0.25s linear;
+    cursor: pointer;
+    display: inline-block; /* Add this line */
+}
+
+.empty-product > button a {
+    text-decoration: none; /* Add this line */
+    color: #ffffff; /* Add this line */
+}
+
+.empty-product > button:hover {
+    background-color: #27ae60;
+}
+
+
+.products {
+    border-top: 1px solid #ddd;
+    border-radius: 1.5rem;
+    border: 2px solid #E6E6E6;
+    background: #FAFAF5;
+    
+}
+  
+.row {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+  }
+  
+  .col,
+  .quantity,
+  .remove {
+    float: left;
+  }
+  
+  .col.left {
+    width: 70%;
+  }
+  
+  .col.right {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 30px);
+  }
+  
+  .detail {
+    padding: 0 0.5rem;
+    line-height: 2.2rem;
+  }
+  
+  .detail .name {
+    font-size: 1.2rem;
+  }
+  
+  .detail .description {
+    color: #7d7d7d;
+    font-size: 1rem;
+  }
+  
+  .detail .price {
+    font-size: 1.5rem;
+  }
+  
+  .quantity,
+  .remove {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .remove svg {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .quantity > input {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border: 2px solid #ddd;
+    color: #7f7f7f;
+    text-align: center;
+    font: 600 1.5rem Helvetica, Arial, sans-serif;
+  }
+  
+  .quantity > input:hover,
+  .quantity > input:focus {
+    border-color: #f58551;
+}
+
+.summary-box {
+    width: 24.6875rem;
+    height: 19.875rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100rem;
+    margin-top: -30px;
+    border-radius: 1.5rem;
+    border: 2px solid #E6E6E6;
+    background: #FAFAF5;
+    text-align: left; /* Align text to the left */
+}
+
+.summary {
+    margin-top: 2rem;
+    align-items: start;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Inter';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; 
+    text-align: center; 
+}
+
+.summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+}
+  
+.summary ul li {
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 190%; /* 1.3rem */
+    text-align: right;
+}
+  
+.summary ul li span {
+    width : 100%;
+    text-align: center;
+    
+}
+  
+.summary ul li.total {
+    font-weight: bold;
+}
+  
+  
+  
+  .checkout {
+    text-align: center;
+  }
+  
+  .checkout > button {
+    display: inline-flex;
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 7rem;
+    border-radius: 0.5rem;
+    background: #426B1F;
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 1.3rem */
+  }
+  
+  .checkout > button::after {
+    position: relative;
+    right: 0;
+    content: " \276f";
+    transition: all 0.15s linear;
+  }
+  
+  .checkout > button:hover {
+    background-color: #27ae60;
+    background-color: #27ae60;
+  }
+  
+  .checkout > button:hover::after {
+    right: -5px;
+  }
+  
+  .checkout > button:focus {
+    outline: none;
+  }
+
+  
+  
+  
+  
+  /* Add your existing media queries here */
+  
