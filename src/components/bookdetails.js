@@ -7,7 +7,7 @@ const BookDetails = ({ bookId }) => {
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
-        const response = await fetch("http://localhost:7266/api/v1/Book/GetBookDetails?bookId=${bookId}", {
+        const response = await fetch("https://d6a5-217-218-145-215.ngrok-free.app/api/v1/Book/GetBookDetails?bookId=${bookId}", {
           method: 'GET',
           headers: {
             'accept': '*/*',
@@ -26,7 +26,7 @@ const BookDetails = ({ bookId }) => {
 
   const handleAddToCart = async () => {
     try {
-      const response = await fetch("http://localhost:7266/api/v1/Book/AddToCart", {
+      const response = await fetch("https://d6a5-217-218-145-215.ngrok-free.app/api/v1/Book/AddToCart", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ const BookDetails = ({ bookId }) => {
 
   const handleAddToWishlist = async () => {
     try {
-      const response = await fetch("http://localhost:7266/api/v1/Book/AddToWishList", {
+      const response = await fetch("https://d6a5-217-218-145-215.ngrok-free.app/api/v1/Book/AddToWishList", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,6 +68,7 @@ const BookDetails = ({ bookId }) => {
   return (
     <div className="book-details-container">
       <h2 className="book-title">{bookDetails.title}</h2>
+      <div className="line"></div>
       <img className="book-image" src={bookDetails.image} alt={bookDetails.title} />
       <p className="book-authors">Authors: {bookDetails.authors.join(', ')}</p>
       <p className="book-description">Description: {bookDetails.description}</p>

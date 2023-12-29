@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../cssfile/profile.css';
 import Login from './login';
-const BASE_URL = 'http://localhost:7266/api/v1/User/GetUserProfile'; // Replace with your actual backend URL
+const BASE_URL = 'https://d6a5-217-218-145-215.ngrok-free.app/api/v1/User/GetUserProfile'; // Replace with your actual backend URL
 
 function Profile() {
   const [user, setUser] = useState(null);

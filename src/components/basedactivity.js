@@ -10,9 +10,10 @@ const ActivitySection = () => {
   useEffect(() => {
     const fetchActivityData = async () => {
       try {
-        const response = await fetch("http://localhost:7266/api/v1/Book/GetBasedOnYourActivity", {
+        const response = await fetch("https://d6a5-217-218-145-215.ngrok-free.app/api/v1/Book/GetBasedOnYourActivity", {
           method: 'GET',
           headers: {
+            'ngrok-skip-browser-warning':true,
             'accept': '*/*',
           },
         });

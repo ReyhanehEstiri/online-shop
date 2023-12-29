@@ -1,13 +1,17 @@
-/* BookDetails.css */
+.line {
+  padding-top: 3%;
+  border-bottom: 1px solid #000000;
+  margin-bottom: 10px; 
+  width: 120rem;
+}
 
-/* Style for the container div */
 .book-details-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 77.25rem;
+  height: 44rem;
+  flex-shrink: 0;
+  border-radius: 1.5rem;
+  border: 2px solid #E6E6E6;
+  background: #FAFAF5;
 }
 
 /* Style for the book title */

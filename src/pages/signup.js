@@ -26,7 +26,7 @@ function Signup() {
     }
 
     try {
-      const response = await fetch('http://localhost:7266/api/v1/Account/Register', {
+      const response = await fetch('https://d6a5-217-218-145-215.ngrok-free.app/api/v1/Account/Register', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

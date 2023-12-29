@@ -2,8 +2,9 @@
   text-align: center;
 }
 body {
-  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background: rgb(36,205,195);
+  background: linear-gradient(330deg, rgba(36,205,195,1) 0%, rgba(202, 117, 96, 0.902) 70%);
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,6 +17,11 @@ body {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+@font-face {
+  font-family: "IM FELL Great Primer SC";
+  src: local("IM FELL Great Primer SC"),
+    url("./font/IMFellGreatPrimerSC-Regular.ttf") format("woff");
 }
 
 @media (prefers-reduced-motion: no-preference) {
