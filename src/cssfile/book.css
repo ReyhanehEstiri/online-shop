@@ -1,34 +1,66 @@
-.book-details {
-  width: 77.25rem;
-  height: 44rem;
-  flex-shrink: 0;
-  border-radius: 1.5rem;
-  border: 2px solid #E6E6E6;
-  background: #FAFAF5;
-  }
-  
-  .book-details h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .book-details p {
-    margin: 0 0 10px;
-    color: #666;
-  }
-  
-  .book-details button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
-  }
-  
-  .book-details button:hover {
-    background-color: #297fb8;
-  }
-  
+/* BookDetails.css */
+
+/* Style for the container div */
+.book-details-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the book title */
+.book-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Style for the book image */
+.book-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+/* Style for the authors */
+.book-authors {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Style for the book description */
+.book-description {
+  margin-bottom: 20px;
+}
+
+/* Style for the book price */
+.book-price {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Style for the buttons */
+.book-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Additional styling for the 'Add to Wishlist' button */
+.book-button.wishlist {
+  background-color: #28a745;
+}
+
+/* Loading message style */
+.loading-message {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px;
+}

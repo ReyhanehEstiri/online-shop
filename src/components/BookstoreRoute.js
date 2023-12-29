@@ -4,7 +4,7 @@ import Profile from "../pages/profile";
 import Wishlist from '../pages/wishlist';
 import Home from "../pages/home";
 import Basket from "../pages/basket";
-import Books from "./book.js";
+import BookDetails from "../components/bookdetails.js"; 
 import Login from "../pages/login";
 import Signup from "../pages/signup.js"
 
@@ -16,7 +16,7 @@ function BookstoreRoutes() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/Wishlist" element={<Wishlist />} />
             <Route path="/basket" element={<Basket />} />
-            <Route path="/product" element={<Books />} />
+            <Route path="/product" element={<BookDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup/>} />
 

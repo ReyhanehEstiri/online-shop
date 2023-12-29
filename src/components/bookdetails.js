@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "../cssfile/book.css";
 
 const BookDetails = ({ bookId }) => {
   const [bookDetails, setBookDetails] = useState(null);
@@ -6,7 +7,7 @@ const BookDetails = ({ bookId }) => {
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:7266/api/v1/Book/GetBookDetails?bookId=${bookId}`, {
+        const response = await fetch("http://localhost:7266/api/v1/Book/GetBookDetails?bookId=${bookId}", {
           method: 'GET',
           headers: {
             'accept': '*/*',
@@ -25,7 +26,7 @@ const BookDetails = ({ bookId }) => {
 
   const handleAddToCart = async () => {
     try {
-      const response = await fetch(`https://your-api-endpoint/cart/add`, {
+      const response = await fetch("http://localhost:7266/api/v1/Book/AddToCart", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,7 +45,7 @@ const BookDetails = ({ bookId }) => {
 
   const handleAddToWishlist = async () => {
     try {
-      const response = await fetch(`https://your-api-endpoint/wishlist/add`, {
+      const response = await fetch("http://localhost:7266/api/v1/Book/AddToWishList", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,16 +65,15 @@ const BookDetails = ({ bookId }) => {
   if (!bookDetails) {
     return <p>Loading...</p>;
   }
-
   return (
-    <div>
-      <h2>{bookDetails.title}</h2>
-      <img src={bookDetails.image} alt={bookDetails.title} style={{ maxWidth: '300px' }} />
-      <p>Authors: {bookDetails.authors.join(', ')}</p>
-      <p>Description: {bookDetails.description}</p>
-      <p>Price: ${bookDetails.price}</p>
-      <button onClick={handleAddToCart}>Add to Cart</button>
-      <button onClick={handleAddToWishlist}>Add to Wishlist</button>
+    <div className="book-details-container">
+      <h2 className="book-title">{bookDetails.title}</h2>
+      <img className="book-image" src={bookDetails.image} alt={bookDetails.title} />
+      <p className="book-authors">Authors: {bookDetails.authors.join(', ')}</p>
+      <p className="book-description">Description: {bookDetails.description}</p>
+      <p className="book-price">Price: ${bookDetails.price}</p>
+      <button className="book-button" onClick={handleAddToCart}>Add to Cart</button>
+      <button className="book-button wishlist" onClick={handleAddToWishlist}>Add to Wishlist</button>
     </div>
   );
 };
