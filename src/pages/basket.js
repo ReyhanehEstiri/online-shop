@@ -96,45 +96,69 @@ function Basket() {
   };
 
   return (
-    <div id="app">
-      <div className='banner'>
-        <h1 className="main_title">Basket</h1>
-        <div className="line"></div>
+    // <div id="app">
+    //   <div className='banner'>
+    //     <h1 className="main_title">Basket</h1>
+    //     <div className="line"></div>
+    //   </div>
+
+    //   <section className="container">
+    //   </section>
+
+    //   <div className='summary-box'>
+    //     <div className="summary">
+    //       <h1>Order Summary</h1>
+    //       <ul>
+    //         <li>Subtotal <span>${subTotal}</span></li>
+    //         <li>Tax <span>${fixedTax}</span></li>
+    //         <li>Shipping <span>${shippingCost}</span></li>
+    //         <li className="total">Total <span>${totalPrice}</span></li>
+    //       </ul>
+    //     </div>
+
+    //     <div className="checkout">
+    //       <button type="button" onClick={handlePurchase}>
+    //         Continue to payment
+    //       </button>
+    //     </div>
+    //   </div>
+
+    //   {products.length > 0 && (
+    //     <ul className="products">
+    //       {products.map((product, index) => (
+    //         <li key={index} className="row">
+    //           {/* ... (your existing product information) */}
+    //           <button type="button" onClick={() => removeItem(product.bookId, product.userId)}>
+    //             Remove
+    //           </button>
+    //         </li>
+    //       ))}
+    //     </ul>
+    //   )} 
+
+    // </div>
+    <div className='basket-page-container'>
+
+      <div className='basket-text-container'>
+        <div className='basket-text'>
+          <p>
+            Basket
+          </p>
+        </div>
+        <div className='basket-items-count'>
+          <p>
+            3 items
+          </p>
+        </div>
       </div>
 
-      <section className="container">
-      </section>
-
-      <div className='summary-box'>
-        <div className="summary">
-          <h1>Order Summary</h1>
-          <ul>
-            <li>Subtotal <span>${subTotal}</span></li>
-            <li>Tax <span>${fixedTax}</span></li>
-            <li>Shipping <span>${shippingCost}</span></li>
-            <li className="total">Total <span>${totalPrice}</span></li>
-          </ul>
+      <div className='basket-items-container'>
+        <div className='basket-cart-books'>
+          <div className='basket-cart-book'>4</div>
         </div>
 
-        <div className="checkout">
-          <button type="button" onClick={handlePurchase}>
-            Continue to payment
-          </button>
-        </div>
+        <div className='basket-order-summery-container'></div>
       </div>
-
-      {products.length > 0 && (
-        <ul className="products">
-          {products.map((product, index) => (
-            <li key={index} className="row">
-              {/* ... (your existing product information) */}
-              <button type="button" onClick={() => removeItem(product.bookId, product.userId)}>
-                Remove
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
 
     </div>
   );
