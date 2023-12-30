@@ -11,10 +11,17 @@ function Profile() {
   const [cartItemsNumber, setCartItemsNumber] = useState(0);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  let logged_in = false;
+  let user_id = localStorage.getItem("user_id");
+
+  if (user_id) {
+      logged_in = true;
+  }
 
   useEffect(() => {
-    const user_id = localStorage.getItem('user_id');
-    getProfile(user_id);
+    if (user_id && logged_in) {
+      getProfile();
+  }
 
     
     const savedCookie = localStorage.getItem('cookie');

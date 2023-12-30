@@ -24,7 +24,7 @@ function Signup() {
       setErrorMessage('Passwords do not match.');
       return;
     }
-
+    
     try {
       const response = await fetch(' https://25ed-5-202-181-171.ngrok-free.app/api/v1/Account/Register', {
         method: 'POST',
