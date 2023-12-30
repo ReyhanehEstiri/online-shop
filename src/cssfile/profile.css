@@ -1,18 +1,21 @@
-body{
-    margin-left: 100rem important;
-    margin-right: 30rem;
-    min-height: 200vh;
+/* body{
+    display: flex;
+    flex-direction: column;
 }
 
 .banner {
-    padding-top: 0rem;
-    padding-right: 12rem ;
-    padding-bottom: 10rem;
-    margin-bottom: 90rem;
-    width: 78rem;
-    height: 9.3125rem;
+    border: 2px solid #E6E6E6;
+    background: rgba(255, 255, 255, 0.504);
+    text-align: center;
+    border-radius: 40px;
+    width: 72.5rem;
+    height: 35.3125rem;
     flex-shrink: 0;
-    background: rgba(255, 255, 255, 0.00);
+    overflow: hidden;
+    border-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
   
 .main_title{
@@ -24,7 +27,7 @@ body{
     font-size: 4rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 120%; /* 4.8rem */
+    line-height: 120%;
     letter-spacing: -0.08rem;
     
 }
@@ -62,7 +65,7 @@ body{
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 0%; /* 0rem */
+    line-height: 0%; 
     letter-spacing: 0.51rem;
     color: inherit; 
 }
@@ -82,4 +85,131 @@ body{
     border-radius: 3.6875rem;
     background: rgba(255, 255, 255, 0.50);
 }
-  
+   */
+#root{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+   
+.profile-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-text-container{
+    width: 78rem;
+height: 9.3125rem;
+flex-shrink: 0;
+}
+.profile-text{
+    color: #000;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Newsreader;
+font-size: 4rem;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 4.8rem */
+letter-spacing: -0.08rem;
+}
+
+.profile-cart-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -2rem;
+}
+
+.profile-cart-container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-text-container-text{
+    direction: ltr;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-user-wishlist{
+    width: 100%;
+    border-radius: 2.5rem;
+    /* background: rgba(255, 255, 255, 0.25); */
+    margin: 1rem;
+}
+
+.profile-user-books{
+    width: 100%;
+    border-radius: 2.5rem;
+    /* background: rgba(255, 255, 255, 0.25); */
+    margin: 1rem;
+}
+
+.profile-user{
+    width: 100%;
+    height: 14.6875rem;
+    flex-shrink: 0;
+    border-radius: 3.6875rem;
+    background: rgba(255, 255, 255, 0.50);
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-wish{
+    width: 100%;
+    height: 38.0625rem;
+    flex-shrink: 0;
+    border-radius: 2.5rem;
+    background: rgba(255, 255, 255, 0.18);
+    margin-top: 1rem;
+}
+.profile-books{
+    width: 100%;
+    height: 59.125rem;
+    flex-shrink: 0;
+    border-radius: 2.5rem;
+    background: rgba(255, 255, 255, 0.25);
+}
+.user-profile{
+    width: 10.5rem;
+    height: 10.5rem;
+    flex-shrink: 0;
+    fill: lightgray 50% / cover no-repeat;
+    margin: 2rem;
+    border-radius: 50%;
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.50) inset;
+}
+.user-name{
+    display: flex;
+width: 16.875rem;
+height: 3.1875rem;
+flex-direction: column;
+justify-content: flex-end;
+flex-shrink: 0;
+color: #000;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Newsreader;
+font-size: 2.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 2.7rem */
+letter-spacing: -0.045rem;
+margin: 2rem;
+}
+
+.user-credit{
+    color: #00A92F;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Newsreader;
+font-size: 2rem;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 2.4rem */
+letter-spacing: -0.04rem;
+margin: 2rem;
+}

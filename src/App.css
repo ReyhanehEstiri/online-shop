@@ -101,7 +101,8 @@ body {
 }
 
 .root-container{
-  margin-top: 65%;
+  width: 100%;
+  /* margin-top: 65%; */
   display: flex;
   flex-direction: column;
 }

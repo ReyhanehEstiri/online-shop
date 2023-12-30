@@ -22,7 +22,7 @@ function Login() {
       setErrorMessage('Please fill in all fields.');
     }
     
-    const response = await fetch("https://25ed-5-202-181-171.ngrok-free.app/api/v1/Account/LogIn", {
+    const response = await fetch("https://localhost:7268/api/v1/Account/LogIn", {
       method: "POST",
       body: JSON.stringify({
         "username": username,
@@ -41,11 +41,9 @@ function Login() {
       // navigate('/profile');
     } else {
       const data = await response.json();
-      setToken(data);
-        localStorage.setItem("cookie", data.token);
 
-        Cookies.set(".AspNetCore.Identity.Application", data.token);
-        
+        localStorage.setItem("user_id", data.token);
+
         navigate("/profile");
     }
   };
