@@ -10,7 +10,7 @@ const NewReleases = () => {
   useEffect(() => {
     const fetchNewReleases = async () => {
       try {
-        const response = await fetch("https://d6a5-217-218-145-215.ngrok-free.app/api/v1/Book/GetNewReleases", {
+        const response = await fetch(" https://25ed-5-202-181-171.ngrok-free.app/api/v1/Book/GetNewReleases", {
           method: 'GET',
           headers: {
             'ngrok-skip-browser-warning':true,
