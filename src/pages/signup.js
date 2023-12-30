@@ -58,7 +58,7 @@ function Signup() {
   return (
     <div className="signup">
       <div className="box">
-        <h1 className="welcome-heading">Sign Up</h1>
+        <h1 className="signup-heading">SignUp</h1>
         <input
           type="text"
           placeholder="Username"

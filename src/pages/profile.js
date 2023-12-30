@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../cssfile/profile.css';
 import Login from './login';
 import Cookies from 'js-cookie';
-const BASE_URL = ' https://25ed-5-202-181-171.ngrok-free.app/api/v1/User/GetUserProfile'; // Replace with your actual backend URL
+const BASE_URL = ' https://25ed-5-202-181-171.ngrok-free.app/api/v1/User/GetUserProfile'; 
 
 function Profile() {
   const [user, setUser] = useState(null);
