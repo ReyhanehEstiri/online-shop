@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Route, useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../cssfile/login.css';
+import Cookies from 'js-cookie';
+
 
 function Login() {
   document.title = 'Online Book Shop';
   const [username, setUsername] = useState('');
+  const [userToken, setToken] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   
@@ -19,24 +22,31 @@ function Login() {
       setErrorMessage('Please fill in all fields.');
     }
     
-    const response = await fetch("https://localhost:7266/api/v1/Account/LogIn", {
+    const response = await fetch("https://d6a5-217-218-145-215.ngrok-free.app/api/v1/Account/LogIn", {
       method: "POST",
       body: JSON.stringify({
         "username": username,
         "password": password
       }),
       headers: {
+        'ngrok-skip-browser-warning':true,
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
     });
 
-    if (response.status === 200) {
+    if (response.status !== 200) {
       alert('Username or password is wrong!');
       // const navigate = useNavigate(); // Don't use useNavigate here
       // navigate('/profile');
     } else {
-      alert("Error");
+      const data = await response.json();
+      setToken(data);
+        localStorage.setItem("cookie", data.token);
+
+        Cookies.set(".AspNetCore.Identity.Application", data.token);
+        
+        navigate("/profile");
     }
   };
 
@@ -53,7 +63,7 @@ function Login() {
 
   return (
     <div className="login">
-      <div className="box">
+      <div className="login-box">
         <h1 className="welcome-heading">Welcome</h1>
         <input
           type="text"

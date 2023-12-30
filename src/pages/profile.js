@@ -2,25 +2,24 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../cssfile/profile.css';
 import Login from './login';
+import Cookies from 'js-cookie';
 const BASE_URL = 'https://d6a5-217-218-145-215.ngrok-free.app/api/v1/User/GetUserProfile'; // Replace with your actual backend URL
 
 function Profile() {
   const [user, setUser] = useState(null);
+  const [cookie, setCookie] = useState('');
   const [cartItemsNumber, setCartItemsNumber] = useState(0);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     const user_id = localStorage.getItem('user_id');
+    getProfile(user_id);
 
-    if (user_id) {
-      setIsLoggedIn(true);
-      getProfile(user_id);
-    } else {
-      setIsLoggedIn(false);
-      // Redirect to the login page if not logged in
-      navigate('/Login');
-    }
+    
+    const savedCookie = localStorage.getItem('cookie');
+    setCookie(savedCookie);
+
 
     const cartItems = JSON.parse(localStorage.getItem('items'));
     let counter = 0;
@@ -35,13 +34,17 @@ function Profile() {
   const getProfile = (user_id) => {
     fetch(`${BASE_URL}/User/GetUserProfile`, {
       method: 'GET',
+      credentials: "same-origin",
       headers: {
-        'accept': '*/*',
-      },
+        'Set-Cookie': '.AspNetCore.Identity.Application='+localStorage.getItem('cookie'),
+        'ngrok-skip-browser-warning':true,
+        'accept': '*/*'
+      }
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Failed to fetch user data');
+          // throw new Error('Failed to fetch user data');
+          navigate('/Login');
         }
         return response.json();
       })

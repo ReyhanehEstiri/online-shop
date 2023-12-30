@@ -18,7 +18,7 @@
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: 'IM FELL Great Primer SC';
-    font-size: 25px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -34,7 +34,7 @@
   
 .quote-author {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
     color: #555;
     margin-top: -3rem;

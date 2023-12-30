@@ -27,14 +27,15 @@
     /* flex-direction: column; */
     font-family: 'IM FELL Great Primer SC';
     font-feature-settings: 'clig' off, 'liga' off;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     /* height: 60px; */
     /* justify-content: center; */
     letter-spacing: 8.16px;
     line-height: 1.4;
-    /* margin-top: 30px; */
+    font-size: 16px;
+    margin-top: 30px;
     /* position: relative; */
     /* text-align: center; */
     /* width: 100%; */

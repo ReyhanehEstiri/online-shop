@@ -14,7 +14,7 @@ export function ProductM({product}) {
 //   );
   return (
       <div className="supply-product">
-          <Link to={`/product?id=${product.id}`}>
+          <Link to={`/product/${product.id}`}>
               <img src={product.imageUrl}
                    className="product-image" alt="img"/>
 

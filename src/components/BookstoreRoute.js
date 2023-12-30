@@ -16,7 +16,7 @@ function BookstoreRoutes() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/Wishlist" element={<Wishlist />} />
             <Route path="/basket" element={<Basket />} />
-            <Route path="/product" element={<BookDetails />} />
+            <Route path="/product/:id" element={<BookDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup/>} />
 

@@ -23,6 +23,21 @@ body {
   src: local("IM FELL Great Primer SC"),
     url("./font/IMFellGreatPrimerSC-Regular.ttf") format("woff");
 }
+@font-face {
+  font-family: "Imprima";
+  src: local("Imprima"),
+    url("./font/Imprima-Regular.ttf") format("woff");
+}
+@font-face {
+  font-family: "IM FELL English";
+  src: local("IM FELL English"),
+    url("./font/IMFellEnglish-Regular.ttf") format("woff");
+}
+@font-face {
+  font-family: "Inknut Antiqua";
+  src: local("Inknut Antiqua"),
+    url("./font/InknutAntiqua-Regular.ttf") format("woff");
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
