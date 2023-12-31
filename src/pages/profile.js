@@ -125,16 +125,16 @@ function Profile() {
                 </div>
               </div>
               <div className='profile-wish'>
-              <div className='profile-books'>
+              {/* <div className='profile-books-wish'> */}
                   <div className='profile-books-title'>
                     Wish List
                   </div>
-                  <div className='user-books-images'>
+                  <div className='user-books-wish'>
                     {userWishList.map((product) => (
                       <ProductM key={product.id} product={product} />
                     ))}
                   </div>
-                </div>
+                {/* </div> */}
               </div>
             </div>
             <div className='profile-user-books'>
