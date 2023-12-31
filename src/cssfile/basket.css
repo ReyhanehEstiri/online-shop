@@ -325,15 +325,18 @@ background: #FAFAF5;
   text-align: left;
 
 }
-.basket-order-summary-item{
+.basket-order-summary-item {
   color: #000;
-font-feature-settings: 'clig' off, 'liga' off;
-font-family: Inter;
-font-size: 1rem;
-font-style: normal;
-font-weight: 400;
-line-height: 130%; /* 1.3rem */
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; 
+
+  
 }
+
 .basket-order-summary-bottom{
   display: flex;
 padding: 0.5rem 1rem 0.5rem 1.5rem;
@@ -342,6 +345,7 @@ align-items: center;
 gap: 7rem;
 border-radius: 0.5rem;
 background: #426B1F;
+
 }
 
 .basket-order-summary-bottom-text{
