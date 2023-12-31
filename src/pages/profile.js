@@ -113,6 +113,7 @@ function Profile() {
             <button className='logout-button'onClick={handleLogOut}>Logout</button>
           </div>
         </div>
+        {/* <hr className='divider'></hr> */}
         {isLoading ? (
         <p>Loading...</p>
       ) : (
@@ -130,7 +131,7 @@ function Profile() {
                   </div>
                 </div>
               </div>
-              <div id='1' className='profile-wish'>
+              <div className='profile-wish'>
               {/* <div className='profile-books-wish'> */}
                   <div className='profile-books-title'>
                     Wish List

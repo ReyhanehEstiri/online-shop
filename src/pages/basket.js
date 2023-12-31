@@ -110,11 +110,9 @@ function Basket() {
       });
 
       if (response.ok) {
-        const responseData = await response.json();
         getUserBooks();
         navigate('/profile')
         window.location.reload(); 
-
       } else {
         alert('Failed to purchase user cart');
       }

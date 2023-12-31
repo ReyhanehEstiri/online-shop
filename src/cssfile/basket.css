@@ -10,6 +10,8 @@
   display: flex;
   flex-direction: row;
   width: 80%;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .basket-text{
@@ -112,7 +114,7 @@ align-items: center;
 gap: 7rem;
 border-radius: 0.5rem;
 background: #426B1F;
-width: 80%;
+/* width: 80%; */
 justify-content: center;
 align-items: center;
 
@@ -130,7 +132,6 @@ font-family: Inter;
 font-size: 1rem;
 font-style: normal;
 font-weight: 600;
-line-height: 130%; /* 1.3rem */
 }
 
 .basket-order-summary-total{
