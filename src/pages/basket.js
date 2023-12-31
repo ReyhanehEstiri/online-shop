@@ -22,7 +22,7 @@ function Basket() {
   const getUserBooks= ()=>{
     try {
       var user_id = localStorage.getItem('user_id');
-      fetch('https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/GetUserCart?userId='+user_id, {
+      fetch('https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/GetUserCart?userId='+user_id, {
         method: 'GET',
         headers: {
           'ngrok-skip-browser-warning':true,
@@ -76,7 +76,7 @@ function Basket() {
 
   // const removeItem = async (bookId, userId) => {
   //   try {
-  //     const response = await fetch('https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/RemoveBookFromCart', {
+  //     const response = await fetch('https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/RemoveBookFromCart', {
   //       method: 'DELETE',
   //       headers: {
   //         'accept': '*/*',
@@ -104,7 +104,7 @@ function Basket() {
 
   // const handlePurchase = async () => {
   //   try {
-  //     const response = await fetch('https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/PurchaseUserCart', {
+  //     const response = await fetch('https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/PurchaseUserCart', {
   //       method: 'POST',
   //       headers: {
   //         'accept': '*/*',

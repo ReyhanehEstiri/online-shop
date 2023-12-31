@@ -12,7 +12,7 @@ const BookDetails = () => {
     console.log(id);
     const fetchBookDetails = async () => {
       try {
-        const response = await fetch("https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/GetBookDetails?Id="+id, {
+        const response = await fetch("https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/GetBookDetails?Id="+id, {
           method: 'GET',
           headers: {
             'ngrok-skip-browser-warning':true,
@@ -38,7 +38,7 @@ const BookDetails = () => {
     }
     
     try {
-      const response = await fetch("https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/AddToCart", {
+      const response = await fetch("https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/AddToCart", {
         method: 'POST',
         headers: {
           'ngrok-skip-browser-warning':true,
@@ -61,7 +61,7 @@ const BookDetails = () => {
 
   const handleAddToWishlist = async () => {
     try {
-      const response = await fetch("https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/AddToWishList", {
+      const response = await fetch("https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/AddToWishList", {
         method: 'POST',
         headers: {
           'ngrok-skip-browser-warning':true,

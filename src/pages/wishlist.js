@@ -8,7 +8,7 @@ function Wishlist() {
   useEffect(() => {
     const fetchWishlistData = async () => {
       try {
-        const response = await fetch('https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/GetUserWishList', {
+        const response = await fetch('https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/GetUserWishList', {
           method: 'GET',
           headers: {
             'accept': '*/*',
@@ -33,7 +33,7 @@ function Wishlist() {
 
   const removeFromWishlist = async (itemId, userId) => {
     try {
-      const response = await fetch('https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/RemoveBookFromWishList', {
+      const response = await fetch('https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/RemoveBookFromWishList', {
         method: 'DELETE',
         headers: {
           'accept': '*/*',
