@@ -60,6 +60,12 @@ function Login() {
     navigate('/signup');
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      HandleLogin();
+    }
+  };
+
   return (
     <div className="login">
       <div className="login-box">
@@ -75,6 +81,7 @@ function Login() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
         <p className="forgot-password" onClick={handleForgotPassword}>
           Forgot Password?
