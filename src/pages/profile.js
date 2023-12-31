@@ -123,7 +123,7 @@ function Profile() {
                   </div>
                 </div>
               </div>
-              <div className='profile-wish'>
+              <div id='1' className='profile-wish'>
               {/* <div className='profile-books-wish'> */}
                   <div className='profile-books-title'>
                     Wish List

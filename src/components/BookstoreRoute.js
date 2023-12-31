@@ -14,7 +14,6 @@ function BookstoreRoutes() {
         <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/Wishlist" element={<Wishlist />} />
             <Route path="/basket" element={<Basket />} />
             <Route path="/product/:id" element={<BookDetails />} />
             <Route path="/login" element={<Login />} />

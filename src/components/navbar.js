@@ -24,7 +24,7 @@ function navigateToHome(){
         //  onClick={navigateToHome()}
          >Online Book Shop</div>
         <ul>
-          <li><Link to="/Wishlist">Wishlist</Link></li>
+          <li><Link to="/profile#1">Wishlist</Link></li>
           <li><Link to="/profile">My profile</Link></li>
           <li><Link to="/">Home</Link></li>
         </ul>
