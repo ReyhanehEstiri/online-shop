@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../cssfile/basket.css';
 
+
 function Basket() {
   const [products, setProducts] = useState([]);
 
@@ -160,9 +161,24 @@ function Basket() {
         <div className='basket-order-summery-container'>
           <div className='basket-order-summary-title'>
             <p>Order summary</p>
-
           </div>
-        </div>
+            <div className='basket-order-summary-item'>
+              <p>Subtotal</p>
+              <p>Shiping</p>
+              <p>Tax</p>
+            </div>
+              <div className='basket-order-summary-total'>
+                <p>Total</p>
+              </div>
+            <button type="button" className='basket-order-summary-bottom'>
+              <div className='basket-order-summary-bottom-text'>Continue to payment</div>
+              <div className='basket-order-summary-bottom-arrow'></div>
+             </button>
+
+
+
+            </div>
+
       </div>
 
     </div>
