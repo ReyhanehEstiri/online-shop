@@ -187,3 +187,14 @@ font-weight: 400;
 line-height: 130%; /* 1.625rem */
 letter-spacing: 0.0375rem;
 }
+
+.basket-item-price{
+  color: #426B1F;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Inter;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 600;
+line-height: 130%;
+}
+
