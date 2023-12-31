@@ -76,8 +76,8 @@ function Basket() {
       const response = await fetch('https://localhost:7268/api/v1/Book/RemoveBookFromCart', {
         method: 'DELETE',
         headers: {
-          'ngrok-skip-browser-warning':true,
           'accept': '*/*',
+          'ngrok-skip-browser-warning':true,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -97,25 +97,32 @@ function Basket() {
     }
   } 
 
-  // const handlePurchase = async () => {
-  //   try {
-  //     const response = await fetch('https://localhost:7268/api/v1/Book/PurchaseUserCart', {
-  //       method: 'POST',
-  //       headers: {
-  //         'accept': '*/*',
-  //       },
-  //     });
+  const handlePurchase = async () => {
+    try {
+      var userid = localStorage.getItem('user_id');
+      const response = await fetch('https://localhost:7268/api/v1/Book/PurchaseUserCart?userId='+userid, {
+        method: 'POST',
+        headers: {
+          'accept': '*/*',
+          'ngrok-skip-browser-warning':true,
+          'Content-Type': 'application/json',
+        },
+      });
 
-  //     if (response.ok) {
-  //       const responseData = await response.json();
-  //       console.log('Purchase API response:', responseData);
-  //     } else {
-  //       console.error('Failed to purchase user cart');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error during purchase API call:', error);
-  //   }
-  // };
+      if (response.ok) {
+        const responseData = await response.json();
+        getUserBooks();
+        navigate('/profile')
+        window.location.reload(); 
+
+      } else {
+        alert('Failed to purchase user cart');
+      }
+    } catch (error) {
+      console.error('Error during purchase API call:', error);
+    }
+  };
+
   const getUserCartCount=()=>{
     return userCart.length;
   }
@@ -199,7 +206,7 @@ function Basket() {
               <div className='flex-space-between'><p>Total</p><p>{calcTotal()}</p></div>
               </div>
             <div className='efesdfsdf'>
-              <button type="button" className='basket-order-summary-bottom'>
+              <button type="button" className='basket-order-summary-bottom' onClick={handlePurchase}>
                 <div className='basket-order-summary-bottom-text'>Continue to payment</div>
                 <div className='basket-order-summary-bottom-arrow'></div>
               </button>
