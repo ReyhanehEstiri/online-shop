@@ -313,3 +313,14 @@ border-radius: 1.5rem;
 border: 2px solid #E6E6E6;
 background: #FAFAF5;
 }
+
+.basket-order-summery-title{
+  color: #000;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Inter;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 600;
+line-height: 130%; /* 1.625rem */
+
+}

@@ -157,7 +157,12 @@ function Basket() {
           <div className='basket-cart-book'>4</div>
         </div>
 
-        <div className='basket-order-summery-container'></div>
+        <div className='basket-order-summery-container'>
+          <div className='basket-order-summary-title'>
+            <p>Order summary</p>
+
+          </div>
+        </div>
       </div>
 
     </div>
