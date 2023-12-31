@@ -13,6 +13,7 @@ function Basket() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log("resr");
     getUserBooks();
 
     // fetchData();
@@ -121,24 +122,6 @@ function Basket() {
   //   }
   // };
 
-  const getBookPrice =  (bookId) => {
-    var data =  fetch('https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/GetBookDetails?Id='+bookId, {
-      method: 'GET',
-      headers: {
-        'ngrok-skip-browser-warning':true,
-        'accept': '*/*',
-      },
-      })
-      .then((response) => {
-        return response.json();
-      }).then((parsedData) => {
-        setBookPrice(parsedData.price);
-      });
-
-      return bookPrice;
-  }
-
-
   return (
     <div className='basket-page-container'>
 
@@ -163,13 +146,22 @@ function Basket() {
                     <img className='basket-cart-item-image' alt={bookDetails.title} src={bookDetails.imageUrl}></img>
                   </div>
                   <div className='basket-cart-item-details-container'>
-                    <div className='title-price'>
-                    <div className='basket-item-title'>
-                      <p>{bookDetails.title}</p>
+                    <div className='rer'>
+                      <div className='title-price'>
+                        <div className='basket-item-title'>
+                          <p>{bookDetails.title}</p>
+                        </div>
+                        <div className='basket-item-price-black'>
+                          <p>${bookDetails.price}</p>
+                        </div>
+                      </div>
+                      <div className='basket-item-price'>
+                          <p>${bookDetails.price}</p>
+                      </div>
                     </div>
-                    <div className='basket-item-price'>
-                      <p>${getBookPrice(bookDetails.id)}</p>
-                    </div>
+                    <div className='count-section'>
+                      2
+                      <img src='../assets/images/icon.svg'></img>
                     </div>
                   </div>
               </div>

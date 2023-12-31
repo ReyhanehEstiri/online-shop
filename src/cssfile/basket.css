@@ -40,7 +40,7 @@ margin-top: 4.5rem;
   justify-content: center;
   align-items: center;
   /* width: 70%; */
-  margin: 2rem;
+  /* margin: 2rem; */
 }
 
 .basket-items-container{
@@ -60,6 +60,7 @@ border: 2px solid #E6E6E6;
 background: #FAFAF5;
 display: flex;
 flex-direction: row;
+margin: 1rem;
 }
 
 .basket-order-summery-container{
@@ -86,6 +87,8 @@ margin: 2rem;
   font-weight: 600;
   line-height: 130%; 
   text-align: left;
+  margin: 2rem;
+  margin-bottom: 0;
 
 }
 .basket-order-summary-item {
@@ -96,8 +99,7 @@ margin: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; 
-
-  
+  margin: 2rem;
 }
 
 .basket-order-summary-bottom{
@@ -129,6 +131,8 @@ font-size: 1rem;
 font-style: normal;
 font-weight: 600;
 line-height: 130%; /* 1.3rem */
+margin: 2rem;
+margin-top: 0;
 }
 
 .basket-order-summary-bottom-arrow{
@@ -172,6 +176,10 @@ line-height: 130%; /* 1.3rem */
 
 .basket-cart-item-details-container{
 margin: 1.5rem;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .basket-item-title{
@@ -198,3 +206,36 @@ font-weight: 600;
 line-height: 130%;
 }
 
+.basket-item-price-black{
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Inter;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 600;
+line-height: 130%;
+}
+
+
+.title-price{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.count-section{
+  display: inline-flex;
+  padding: 0.25rem 0.5rem 0.25rem 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4rem;
+  border-radius: 1.25rem;
+  border: 2px solid rgba(0, 0, 0, 0.21);
+  background: #FFF;
+  width: 20%;  
+}
+
+.basket-cart-item-image-container{
+  width: 25%;
+}
