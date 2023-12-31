@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../cssfile/quote.css';
 
 const Quote = () => {
-  const apiUrl = "https://3328-86-55-39-39.ngrok-free.app/api/v1/Book/GetQuote";
+  const apiUrl = "https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/GetQuote";
   const [quoteData, setQuoteData] = useState({ sentence: 'Loading..', author: 'Author' });
 
   const fetchInfo = () => {

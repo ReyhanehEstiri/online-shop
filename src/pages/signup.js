@@ -26,7 +26,7 @@ function Signup() {
     }
     
     try {
-      const response = await fetch('https://3328-86-55-39-39.ngrok-free.app/api/v1/Account/Register', {
+      const response = await fetch('https://c032-86-55-39-39.ngrok-free.app/api/v1/Account/Register', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

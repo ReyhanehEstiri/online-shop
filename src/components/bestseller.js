@@ -10,7 +10,7 @@ const BestSellers = () => {
   useEffect(() => {
     const fetchBestSellers = async () => {
       try {
-        const response = await fetch("https://3328-86-55-39-39.ngrok-free.app/api/v1/Book/GetBestSellers", {
+        const response = await fetch("https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/GetBestSellers", {
           method: 'GET',
           headers: {
             'ngrok-skip-browser-warning':true,

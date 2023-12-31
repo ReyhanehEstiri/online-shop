@@ -213,3 +213,34 @@ line-height: 120%; /* 2.4rem */
 letter-spacing: -0.04rem;
 margin: 2rem;
 }
+
+.profile-books-title{
+    display: flex;
+    width: 28.5625rem;
+    height: 6.0625rem;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: IM FELL Great Primer SC;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0%;
+    letter-spacing: 0.51rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.user-books-images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 2rem;
+    /* margin-top: 0; */
+}
