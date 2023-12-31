@@ -44,8 +44,9 @@
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: row;
 }
 
 .profile-user-wishlist{
@@ -173,4 +174,10 @@
     flex-shrink: 0;
     border-radius: 2.5rem;
     background: rgba(255, 255, 255, 0.25);
+}
+
+.logout-button{
+    background-color: rebeccapurple;
+    min-width: 100rem;
+    min-height: 10rem;
 }
