@@ -1,5 +1,6 @@
 .signup {
   margin-bottom: 50rem;
+  margin-top: -4.2rem;
   }
   
   .box {
@@ -18,7 +19,7 @@
     border: 1px solid #ccc; 
     border-radius: 50px;
     text-align: center;
-    height: 35rem;
+    height: 39rem;
   }
   .box signup-button{
     background:#27ae60;
@@ -31,6 +32,7 @@
     display:block;
     cursor:pointer;
     border-radius: 20px;
+    
 }
   
   .signup-heading {

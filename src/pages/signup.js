@@ -10,11 +10,13 @@ function Signup() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState([]);
 
   const navigate = useNavigate();
 
   const handleSignup = async () => {
+    setErrorMessage("");
+    
     if (!username || !password || !confirmPassword || !email) {
       setErrorMessage('Please fill in all fields.');
       return;
@@ -42,12 +44,17 @@ function Signup() {
       if (response.ok) {
         alert('Signup successful!'); 
         navigate('/login'); 
+      }else{
         const errorData = await response.json();
-        if (errorData && errorData.message) {
-          setErrorMessage(errorData.message);
-        } else {
-          setErrorMessage('Error during signup.');
+        if (errorData){
+            var errors = "";
+            errorData.forEach(element => {
+              errors += element.message;
+            });
+            setErrorMessage(errors);
         }
+
+          
       }
     } catch (error) {
       console.error('Error during signup:', error);
