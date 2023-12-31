@@ -40,7 +40,7 @@ function Profile() {
         return data;
       });
     } catch (error) {
-
+      navigate('/Login');
     } finally {
       // setIsLoading(false);
     }
@@ -66,7 +66,7 @@ function Profile() {
         return data;
       });
     } catch (error) {
-
+      navigate('/Login');
     } finally {
       // setIsLoading(false);
     }
@@ -89,12 +89,11 @@ function Profile() {
           return response.json();
         })
         .then((data) => {
-          console.log(data);
           setUserBooks(data);
           return data;
         });
       } catch (error) {
-  
+        navigate('/Login');
       } finally {
         setIsLoading(false);
       }
