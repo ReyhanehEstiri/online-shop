@@ -87,8 +87,8 @@ function Basket() {
       });
 
       if (response.ok) {
-        const responseData = await response.json();
         getUserBooks();
+        window.location.reload();
       } else {
         console.error('Failed to remove book from cart');
       }
