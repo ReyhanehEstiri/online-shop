@@ -20,18 +20,17 @@ function navigateToHome(){
     <nav className="navbar">
       <title>Online Book Shop</title>
       <div className="navbar">
-        <div className="brand" onClick={navigateToHome()}>Online Book Shop</div>
+        <div className="brand"
+        //  onClick={navigateToHome()}
+         >Online Book Shop</div>
         <ul>
           <li><Link to="/Wishlist">Wishlist</Link></li>
           <li><Link to="/profile">My profile</Link></li>
           <li><Link to="/">Home</Link></li>
         </ul>
-                      <button className="cart-button" onClick={(handleClick)}>
-                          Cart ({cartItems.length})
-                      </button>
-
-
-
+          <button className="cart-button" onClick={(handleClick)}>
+              Cart ({cartItems.length})
+          </button>
       </div>
     </nav>
   );
