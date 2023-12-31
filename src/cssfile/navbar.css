@@ -91,6 +91,7 @@
     line-height: 130%;
     border: none;
     cursor: pointer;
+    margin-left: 2rem;
 }
   
 .cart-button:hover {
