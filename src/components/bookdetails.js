@@ -60,6 +60,11 @@ const BookDetails = () => {
   };
 
   const handleAddToWishlist = async () => {
+    var user_id = localStorage.getItem('user_id');
+    if(!user_id){
+      navigate('/login');
+      return;
+    }
     try {
       const response = await fetch("https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/AddToWishList", {
         method: 'POST',
@@ -68,14 +73,18 @@ const BookDetails = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          bookId: bookDetails.id,
+          bookId: id,
+          userId: localStorage.getItem('user_id')
           // Add other necessary parameters for adding to the wishlist
         }),
       });
-
-      // Handle the response as needed
+      if(!response.ok){
+        alert("Book already exists in the wish list");
+      }else{
+        navigate('/profile');
+      }
     } catch (error) {
-      console.error('Error adding to wishlist:', error);
+      alert("Error");
     }
   };
   function breakText(text) {
