@@ -5,6 +5,7 @@ import "../cssfile/book.css"
 
 const BookDetails = () => {
   const [bookDetails, setBookDetails] = useState(null);
+  const [isInWishList, setIsInWishList] = useState(false);
   let { id } = useParams();
   const navigate = useNavigate();
   
@@ -20,11 +21,32 @@ const BookDetails = () => {
           },
         });
 
-        const data = await response.json();
-        setBookDetails(data);
+        if(response.ok){
+          const data = await response.json();
+          setBookDetails(data);
+        }
       } catch (error) {
         console.error('Error fetching book details:', error);
       }
+
+      try {
+        var userId = localStorage.getItem('user_id');
+        const response = await fetch("https://localhost:7268/api/v1/Book/IsBookExistsInWishList?userId="+userId+"&bookId="+id, {
+          method: 'GET',
+          headers: {
+            'ngrok-skip-browser-warning':true,
+            'accept': '*/*',
+          },
+        });
+
+        if(response.ok){
+          setIsInWishList(true);
+        }
+      } catch (error) {
+        console.error('Error fetching book details:', error);
+      }
+
+      
     };
 
     fetchBookDetails();
@@ -43,6 +65,7 @@ const BookDetails = () => {
         headers: {
           'ngrok-skip-browser-warning':true,
           'Content-Type': 'application/json',
+          'accept': '*/*',
         },
         body: JSON.stringify({
           bookId: id,
@@ -67,27 +90,60 @@ const BookDetails = () => {
       return;
     }
     try {
-      const response = await fetch("https://localhost:7268/api/v1/Book/AddToWishList", {
+      const response = await fetch("https://localhost:7268/api/v1/Book/AddToWishList?userId="+user_id, {
         method: 'POST',
         headers: {
           'ngrok-skip-browser-warning':true,
           'Content-Type': 'application/json',
+          'accept': '*/*',
         },
         body: JSON.stringify({
           bookId: id,
-          userId: localStorage.getItem('user_id')
-          // Add other necessary parameters for adding to the wishlist
+          userId: user_id
         }),
       });
       if(!response.ok){
         alert("Book already exists in the wish list");
       }else{
         navigate('/profile');
+        window.location.reload();
       }
     } catch (error) {
       alert("Error");
     }
   };
+
+  const handleRemoveFromWishlist = async () => {
+    var user_id = localStorage.getItem('user_id');
+    if(!user_id){
+      navigate('/login');
+      return;
+    }
+    try {
+      const response = await fetch("https://localhost:7268/api/v1/Book/RemoveBookFromWishList", {
+        method: 'DELETE',
+        headers: {
+          'ngrok-skip-browser-warning':true,
+          'Content-Type': 'application/json',
+          'accept': '*/*',
+        },
+        body: JSON.stringify({
+          bookId: id,
+          userId: user_id
+        }),
+      });
+      if(!response.ok){
+        alert("Book already not exists in the wishlist");
+      }else{
+        navigate('/profile');
+        window.location.reload();
+      }
+    } catch (error) {
+      alert("Error");
+    }
+  };
+
+
   function breakText(text) {
     const maxLength = 800;
     if (text.length <= maxLength) {
@@ -156,7 +212,12 @@ const BookDetails = () => {
               <br></br>
               <div className='flex'>
               <button className="book-button addtocart" onClick={handleAddToCart}>Add to Cart</button>
+              {!isInWishList?
               <button className="book-button wishlist" onClick={handleAddToWishlist}>Add to Wishlist</button>
+              :
+              <button className=" remove-wishlist" onClick={handleRemoveFromWishlist}>Remove from Wishlist</button>
+              }
+              
               </div>
               </p>
           

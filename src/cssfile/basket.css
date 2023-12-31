@@ -275,3 +275,18 @@ line-height: 130%;
   justify-content: space-between;
   align-items: center;
 }
+
+.remove-wishlist{
+  border-radius: 0.5rem;
+  border: 1px solid #982222;
+  background: rgba(189, 45, 0, 0.07);
+  display: flex;
+  padding: 0.84375rem 3.625rem 0.84375rem 3.6875rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-wishlist:hover{
+  background: rgba(189, 45, 0, 0.27);
+  cursor: pointer;
+}
