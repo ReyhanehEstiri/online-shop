@@ -87,7 +87,8 @@ body {
 .new-releases-product-wrap{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  /* justify-content: space-evenly; */
+  overflow-x: scroll;
   margin: 2rem;
   padding: 2rem;
 }
@@ -95,7 +96,8 @@ body {
 .activity-list{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  /* justify-content: space-evenly; */
+  overflow-x: scroll;
   margin: 2rem;
   padding: 2rem;
 }
