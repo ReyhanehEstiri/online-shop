@@ -19,7 +19,7 @@ const ActivitySection = () => {
         });
 
         if (!response.ok) {
-          throw new Error("Failed to fetch user activity");
+          return;
         }
 
         const data = await response.json();

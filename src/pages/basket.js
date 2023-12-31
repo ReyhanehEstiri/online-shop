@@ -13,10 +13,7 @@ function Basket() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("resr");
     getUserBooks();
-
-    // fetchData();
   }, []);
 
   const getUserBooks= ()=>{
@@ -79,6 +76,7 @@ function Basket() {
       const response = await fetch('https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/RemoveBookFromCart', {
         method: 'DELETE',
         headers: {
+          'ngrok-skip-browser-warning':true,
           'accept': '*/*',
           'Content-Type': 'application/json',
         },

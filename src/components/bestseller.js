@@ -19,7 +19,7 @@ const BestSellers = () => {
         });
 
         if (response.status !== 200) {
-          throw new Error("Failed to fetch bestsellers");
+          return;
         }
 
         const data = await response.json();

@@ -3,11 +3,42 @@ import { Link, useNavigate } from "react-router-dom"
 import '../cssfile/navbar.css';
 
 const Navbar = () => {
-  const [cartItems, setCartItems] = useState([]);
+  const [userCart, setUserCart] = useState([]);
   const navigate = useNavigate();
-  const addToCart = item => {
-    setCartItems([...cartItems, item]);
+
+  const getUserBooks = ()=>{
+    try {
+      var user_id = localStorage.getItem('user_id');
+      fetch('https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/GetUserCart?userId='+user_id, {
+        method: 'GET',
+        headers: {
+          'ngrok-skip-browser-warning':true,
+          'accept': '*/*', 
+        },
+      })
+        .then((response) => {
+          if (!response.ok) {
+            return "";
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setUserCart(data);
+        });
+      } catch (error) {
+        return "";
+      } finally {
+      }
+
+      if(userCart)
+        return "("+userCart.length+")";
+      return "";
   };
+
+  const GetCart = ()=>{
+    
+  }
+
   const handleClick = () => {
     navigate('/basket');
 }
@@ -29,7 +60,7 @@ function navigateToHome(){
           <li><Link to="/">Home</Link></li>
         </ul>
           <button className="cart-button" onClick={(handleClick)}>
-              Cart ({cartItems.length})
+              Cart {getUserBooks()}
           </button>
       </div>
     </nav>

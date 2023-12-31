@@ -16,7 +16,7 @@ function Wishlist() {
         });
 
         if (!response.ok) {
-          throw new Error('Failed to fetch wishlist data');
+          return;
         }
 
         const data = await response.json();
@@ -46,7 +46,7 @@ function Wishlist() {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to remove item from wishlist');
+        return;
       }
 
       // Update the wishlist data after successful removal

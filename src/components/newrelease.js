@@ -19,7 +19,7 @@ const NewReleases = () => {
         });
 
         if (!response.ok) {
-          throw new Error("Failed to fetch new releases");
+          return;
         }
 
         const data = await response.json();

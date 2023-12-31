@@ -15,7 +15,7 @@ const Quote = () => {
     })
       .then((res) => {
         if (!res.ok) {
-          throw new Error(`HTTP error! Status: ${res.status}`);
+          return;
         }
         return res.json();
       })
