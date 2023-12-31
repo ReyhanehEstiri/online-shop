@@ -160,7 +160,7 @@ function Basket() {
                       </div>
                     </div>
                     <div className='count-section'>
-                      2
+                      1
                       <img src='../assets/images/icon.svg'></img>
                     </div>
                   </div>
@@ -180,10 +180,12 @@ function Basket() {
               <div className='basket-order-summary-total'>
                 <p>Total</p>
               </div>
-            <button type="button" className='basket-order-summary-bottom'>
-              <div className='basket-order-summary-bottom-text'>Continue to payment</div>
-              <div className='basket-order-summary-bottom-arrow'></div>
-             </button>
+            <div className='efesdfsdf'>
+              <button type="button" className='basket-order-summary-bottom'>
+                <div className='basket-order-summary-bottom-text'>Continue to payment</div>
+                <div className='basket-order-summary-bottom-arrow'></div>
+              </button>
+            </div>
 
 
 

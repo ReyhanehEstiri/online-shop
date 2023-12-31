@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import "../cssfile/book.css";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import "../cssfile/book.css"
 
 const BookDetails = () => {
   const [bookDetails, setBookDetails] = useState(null);
   let { id } = useParams();
+  const navigate = useNavigate();
   
   useEffect(() => {
     console.log(id);
@@ -30,6 +31,12 @@ const BookDetails = () => {
   }, [id]);
 
   const handleAddToCart = async () => {
+    var user_id = localStorage.getItem('user_id');
+    if(!user_id){
+      navigate('/login');
+      return;
+    }
+    
     try {
       const response = await fetch("https://c032-86-55-39-39.ngrok-free.app/api/v1/Book/AddToCart", {
         method: 'POST',
@@ -38,14 +45,17 @@ const BookDetails = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          bookId: bookDetails.id,
-          // Add other necessary parameters for adding to the cart
+          bookId: id,
+          userId: localStorage.getItem('user_id')
         }),
       });
-
-      // Handle the response as needed
+      if(!response.ok){
+        alert("Book already exists in the cart");
+      }else{
+        navigate('/basket');
+      }
     } catch (error) {
-      console.error('Error adding to cart:', error);
+      alert("Error");
     }
   };
 

@@ -65,7 +65,7 @@ margin: 1rem;
 
 .basket-order-summery-container{
   /* width: 24.6875rem; */
-/* height: 19.875rem; */
+height: 19.875rem;
 flex-shrink: 0;
 border-radius: 1.5rem;
 border: 2px solid #E6E6E6;
@@ -110,6 +110,9 @@ align-items: center;
 gap: 7rem;
 border-radius: 0.5rem;
 background: #426B1F;
+width: 80%;
+justify-content: center;
+align-items: center;
 
 }
 
@@ -238,4 +241,12 @@ line-height: 130%;
 
 .basket-cart-item-image-container{
   width: 25%;
+}
+
+.efesdfsdf{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
