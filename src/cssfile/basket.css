@@ -250,3 +250,20 @@ line-height: 130%;
   align-items: center;
   width: 100%;
 }
+
+.minus-logo{
+  display: flex;
+  width: 30%;
+  height: 30%;
+  right: 2rem;
+}
+.minus-logo:hover{
+  cursor: pointer;
+}
+
+.flex-space-between{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

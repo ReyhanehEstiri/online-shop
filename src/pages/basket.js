@@ -26,7 +26,7 @@ function Basket() {
         method: 'GET',
         headers: {
           'ngrok-skip-browser-warning':true,
-          'accept': '*/*',
+          'accept': '*/*', 
         },
       })
         .then((response) => {
@@ -74,33 +74,30 @@ function Basket() {
   //   }
   // };
 
-  // const removeItem = async (bookId, userId) => {
-  //   try {
-  //     const response = await fetch('https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/RemoveBookFromCart', {
-  //       method: 'DELETE',
-  //       headers: {
-  //         'accept': '*/*',
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({
-  //         bookId: bookId,
-  //         userId: userId,
-  //       }),
-  //     });
+  async function  removeItemFromCart (book_id) {
+    try {
+      const response = await fetch('https://96c6-217-218-145-81.ngrok-free.app/api/v1/Book/RemoveBookFromCart', {
+        method: 'DELETE',
+        headers: {
+          'accept': '*/*',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          bookId: book_id,
+          userId: localStorage.getItem('user_id'),
+        }),
+      });
 
-  //     if (response.ok) {
-  //       const responseData = await response.json();
-  //       // Handle the response data as needed
-  //       console.log('Remove Book API response:', responseData);
-  //       // Update the products state to reflect the removal
-  //       setProducts((prevProducts) => prevProducts.filter((product) => product.bookId !== bookId));
-  //     } else {
-  //       console.error('Failed to remove book from cart');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error during remove book API call:', error);
-  //   }
-  // };
+      if (response.ok) {
+        const responseData = await response.json();
+        getUserBooks();
+      } else {
+        console.error('Failed to remove book from cart');
+      }
+    } catch (error) {
+      console.error('Error during remove book API call:', error);
+    }
+  } 
 
   // const handlePurchase = async () => {
   //   try {
@@ -121,6 +118,29 @@ function Basket() {
   //     console.error('Error during purchase API call:', error);
   //   }
   // };
+  const getUserCartCount=()=>{
+    return userCart.length;
+  }
+
+  const calcSubtotal=()=>{
+    var total = 0;
+    for(let i=0; i<userCart.length; i++){
+      total+=userCart[i].price;
+    }
+    return total;
+  }
+
+  const calcShiping=()=>{
+    return (calcSubtotal()*0.2).toFixed(2);
+  }
+
+  const calcTax=()=>{
+    return (calcSubtotal()*0.09).toFixed(2);
+  }
+
+  const calcTotal=()=>{
+    return (+calcSubtotal() + +calcShiping() + +calcTax()).toFixed(2);
+  }
 
   return (
     <div className='basket-page-container'>
@@ -133,7 +153,7 @@ function Basket() {
         </div>
         <div className='basket-items-count'>
           <p>
-            3 items
+            {getUserCartCount()} items
           </p>
         </div>
       </div>
@@ -161,7 +181,7 @@ function Basket() {
                     </div>
                     <div className='count-section'>
                       1
-                      <img src='../assets/images/icon.svg'></img>
+                      <img className='minus-logo' src='../assets/images/458344.webp' onClick={()=>removeItemFromCart(bookDetails.id)}></img>
                     </div>
                   </div>
               </div>
@@ -173,12 +193,12 @@ function Basket() {
             <p>Order summary</p>
           </div>
             <div className='basket-order-summary-item'>
-              <p>Subtotal</p>
-              <p>Shiping</p>
-              <p>Tax</p>
+              <div className='flex-space-between'><p>Subtotal</p><p>{calcSubtotal()}</p></div>
+              <div className='flex-space-between'><p>Shiping</p><p>{calcShiping()}</p></div>
+              <div className='flex-space-between'><p>Tax</p><p>{calcTax()}</p></div>
             </div>
               <div className='basket-order-summary-total'>
-                <p>Total</p>
+              <div className='flex-space-between'><p>Total</p><p>{calcTotal()}</p></div>
               </div>
             <div className='efesdfsdf'>
               <button type="button" className='basket-order-summary-bottom'>
