@@ -19,7 +19,7 @@ function Profile() {
   const getProfile = () => {
     try {
     var user_id = localStorage.getItem('user_id');
-    fetch('https://localhost:7268/api/v1/Book/GetUserProfile?userId='+user_id, {
+    fetch('https://3328-86-55-39-39.ngrok-free.app/api/v1/Book/GetUserProfile?userId='+user_id, {
       method: 'GET',
       headers: {
         'ngrok-skip-browser-warning':true,

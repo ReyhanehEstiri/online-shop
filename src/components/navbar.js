@@ -12,11 +12,15 @@ const Navbar = () => {
     navigate('/basket');
 }
 
+function navigateToHome(){
+  navigate('/');
+}
+
   return (
     <nav className="navbar">
       <title>Online Book Shop</title>
       <div className="navbar">
-        <div className="brand" ><a href='/'>Online Book Shop</a></div>
+        <div className="brand" onClick={navigateToHome()}>Online Book Shop</div>
         <ul>
           <li><Link to="/Wishlist">Wishlist</Link></li>
           <li><Link to="/profile">My profile</Link></li>

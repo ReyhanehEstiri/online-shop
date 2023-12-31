@@ -49,7 +49,7 @@ function Basket() {
 
   const removeItem = async (bookId, userId) => {
     try {
-      const response = await fetch(' https://localhost:7268/api/v1/Book/RemoveBookFromCart', {
+      const response = await fetch('https://3328-86-55-39-39.ngrok-free.app/api/v1/Book/RemoveBookFromCart', {
         method: 'DELETE',
         headers: {
           'accept': '*/*',
@@ -77,7 +77,7 @@ function Basket() {
 
   const handlePurchase = async () => {
     try {
-      const response = await fetch(' https://localhost:7268/api/v1/Book/PurchaseUserCart', {
+      const response = await fetch('https://3328-86-55-39-39.ngrok-free.app/api/v1/Book/PurchaseUserCart', {
         method: 'POST',
         headers: {
           'accept': '*/*',
