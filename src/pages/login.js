@@ -44,7 +44,8 @@ function Login() {
 
         localStorage.setItem("user_id", data.token);
 
-        navigate("/profile");
+        navigate("/");
+        window.location.reload(); 
     }
   };
 

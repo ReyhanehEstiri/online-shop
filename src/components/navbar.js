@@ -67,7 +67,7 @@ function navigateToHome(){
           {/* <li><Link to="/"></Link></li> */}
         </ul>
           <button className="cart-button" onClick={(handleClick)}>
-              Cart {userCart.length}
+              Cart {userCart.length==0?"":userCart.length}
           </button>
       </div>
     </nav>

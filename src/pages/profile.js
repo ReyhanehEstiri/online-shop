@@ -99,12 +99,18 @@ function Profile() {
       }
   };
 
+  const handleLogOut= ()=>{
+    localStorage.removeItem('user_id');
+    navigate('/login');
+    window.location.reload(); 
+  }
+
   return (
     <div className='profile-container'>
         <div className='profile-text-container'>
           <div className='profile-text-container-text'>
             <p className='profile-text'>My Profile</p>
-            <button className='logout-button' value="LogOut"></button>
+            <button className='logout-button'onClick={handleLogOut}>Logout</button>
           </div>
         </div>
         {isLoading ? (

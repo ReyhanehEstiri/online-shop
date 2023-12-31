@@ -53,6 +53,7 @@ const BookDetails = () => {
         alert("Book already exists in the cart");
       }else{
         navigate('/basket');
+        window.location.reload(); 
       }
     } catch (error) {
       alert("Error");
