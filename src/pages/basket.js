@@ -19,7 +19,7 @@ function Basket() {
   const getUserBooks= ()=>{
     try {
       var user_id = localStorage.getItem('user_id');
-      fetch('https://localhost:7268/api/v1/Book/GetUserCart?userId='+user_id, {
+      fetch('https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/GetUserCart?userId='+user_id, {
         method: 'GET',
         headers: {
           'ngrok-skip-browser-warning':true,
@@ -73,7 +73,7 @@ function Basket() {
 
   async function  removeItemFromCart (book_id) {
     try {
-      const response = await fetch('https://localhost:7268/api/v1/Book/RemoveBookFromCart', {
+      const response = await fetch('https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/RemoveBookFromCart', {
         method: 'DELETE',
         headers: {
           'accept': '*/*',
@@ -100,7 +100,7 @@ function Basket() {
   const handlePurchase = async () => {
     try {
       var userid = localStorage.getItem('user_id');
-      const response = await fetch('https://localhost:7268/api/v1/Book/PurchaseUserCart?userId='+userid, {
+      const response = await fetch('https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/PurchaseUserCart?userId='+userid, {
         method: 'POST',
         headers: {
           'accept': '*/*',

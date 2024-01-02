@@ -28,7 +28,7 @@ function Signup() {
     }
     
     try {
-      const response = await fetch('https://localhost:7268/api/v1/Account/Register', {
+      const response = await fetch('https://d2be-217-218-145-151.ngrok-free.app/api/v1/Account/Register', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

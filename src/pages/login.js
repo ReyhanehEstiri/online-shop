@@ -22,7 +22,7 @@ function Login() {
       setErrorMessage('Please fill in all fields.');
     }
     
-    const response = await fetch("https://localhost:7268/api/v1/Account/LogIn", {
+    const response = await fetch("https://d2be-217-218-145-151.ngrok-free.app/api/v1/Account/LogIn", {
       method: "POST",
       body: JSON.stringify({
         "username": username,

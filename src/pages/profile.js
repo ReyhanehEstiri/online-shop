@@ -22,7 +22,7 @@ function Profile() {
   const getProfile = () => {
     try {
     var user_id = localStorage.getItem('user_id');
-    fetch('https://localhost:7268/api/v1/Book/GetUserProfile?userId='+user_id, {
+    fetch('https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/GetUserProfile?userId='+user_id, {
       method: 'GET',
       headers: {
         'ngrok-skip-browser-warning':true,
@@ -48,7 +48,7 @@ function Profile() {
   const getWishList = () => {
     try {
     var user_id = localStorage.getItem('user_id');
-    fetch('https://localhost:7268/api/v1/Book/GetUserWishList?userId='+user_id, {
+    fetch('https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/GetUserWishList?userId='+user_id, {
       method: 'GET',
       headers: {
         'ngrok-skip-browser-warning':true,
@@ -75,7 +75,7 @@ function Profile() {
   const getUserBooks= ()=>{
     try {
       var user_id = localStorage.getItem('user_id');
-      fetch('https://localhost:7268/api/v1/Book/GetUserBooks?userId='+user_id, {
+      fetch('https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/GetUserBooks?userId='+user_id, {
         method: 'GET',
         headers: {
           'ngrok-skip-browser-warning':true,

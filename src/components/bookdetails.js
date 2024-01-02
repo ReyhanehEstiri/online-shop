@@ -13,7 +13,7 @@ const BookDetails = () => {
     console.log(id);
     const fetchBookDetails = async () => {
       try {
-        const response = await fetch("https://localhost:7268/api/v1/Book/GetBookDetails?Id="+id, {
+        const response = await fetch("https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/GetBookDetails?Id="+id, {
           method: 'GET',
           headers: {
             'ngrok-skip-browser-warning':true,
@@ -31,7 +31,7 @@ const BookDetails = () => {
 
       try {
         var userId = localStorage.getItem('user_id');
-        const response = await fetch("https://localhost:7268/api/v1/Book/IsBookExistsInWishList?userId="+userId+"&bookId="+id, {
+        const response = await fetch("https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/IsBookExistsInWishList?userId="+userId+"&bookId="+id, {
           method: 'GET',
           headers: {
             'ngrok-skip-browser-warning':true,
@@ -60,7 +60,7 @@ const BookDetails = () => {
     }
     
     try {
-      const response = await fetch("https://localhost:7268/api/v1/Book/AddToCart", {
+      const response = await fetch("https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/AddToCart", {
         method: 'POST',
         headers: {
           'ngrok-skip-browser-warning':true,
@@ -90,7 +90,7 @@ const BookDetails = () => {
       return;
     }
     try {
-      const response = await fetch("https://localhost:7268/api/v1/Book/AddToWishList?userId="+user_id, {
+      const response = await fetch("https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/AddToWishList?userId="+user_id, {
         method: 'POST',
         headers: {
           'ngrok-skip-browser-warning':true,
@@ -120,7 +120,7 @@ const BookDetails = () => {
       return;
     }
     try {
-      const response = await fetch("https://localhost:7268/api/v1/Book/RemoveBookFromWishList", {
+      const response = await fetch("https://d2be-217-218-145-151.ngrok-free.app/api/v1/Book/RemoveBookFromWishList", {
         method: 'DELETE',
         headers: {
           'ngrok-skip-browser-warning':true,
